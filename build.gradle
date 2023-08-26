@@ -1,0 +1,43 @@
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+javafx {
+    version = "11"
+    modules = [ 'javafx.controls' ]
+}
+
+group = "io.github.fortibbrine.base64coder"
+version = "1.0"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:1.18.20"
+    annotationProcessor "org.projectlombok:lombok:1.18.20"
+}
+
+application {
+    applicationDefaultJvmArgs = ['-Dgreeting.language=en']
+    mainClassName = 'io.github.fortibbrine.base64coder.main.Main'
+}
+
+//jar {
+//    manifest {
+//        attributes(
+//            "Main-Class": "io.github.fortibbrine.base64coder.main.Main"
+//        )
+//    }
+//}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
