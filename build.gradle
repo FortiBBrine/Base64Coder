@@ -10,7 +10,7 @@ javafx {
     modules = [ 'javafx.controls' ]
 }
 
-group = "io.github.fortibbrine.base64coder"
+group = "io.github.fortibbrine"
 version = "1.0"
 
 repositories {
